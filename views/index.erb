@@ -1,4 +1,10 @@
 <div>
   <h1>My name is <%= @name %>!</h1>
   <img style='border: 2px dashed red;' src='http://bit.ly/1eze8aE'>
+  <% if @name.nil? %>
+    <form action="/named-cat">
+      <input type="text" name="name">
+      <input type="submit" value="Submit">
+    </form>
+  <% end %>
 </div>
